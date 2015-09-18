@@ -22,6 +22,7 @@
     <color name="text_grey">#D5D5D5</color>
     <color name="text_blue">#256EB1</color>
 
+
     <!-- settings color -->
     <color name="settings_text">#333333</color>
     <color name="settings_text_pressed">#ffffff</color>
@@ -29,5 +30,9 @@
     <color name="settings_bg_pressed">@color/common_color_light</color>
     <color name="editext_border_normal">#ea4c89</color>
     <color name="editext_border_focus">#ea4c89</color>
+
+
+    <color name="circle_blue">#4989D2</color>
+    <color name="circle_blue_light">#65b2d8</color>
 
 </resources>

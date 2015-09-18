@@ -11,7 +11,7 @@ import com.azhuoinfo.cqurity.R;
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
-public class HomeFragment extends BaseContentFragment {
+public class ProjectFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class HomeFragment extends BaseContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.fragment_home, container, false);
+		View v = inflater.inflate(R.layout.fragment_list, container, false);
 		return v;
 	}
 
@@ -44,8 +44,7 @@ public class HomeFragment extends BaseContentFragment {
 	
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
-		this.setTitle(R.string.title_home);
-		
+
 	}
 
 	@Override
@@ -67,7 +66,7 @@ public class HomeFragment extends BaseContentFragment {
 
 	@Override
 	public boolean isCleanStack() {
-		return true;
+		return false;
 	}
 
 }

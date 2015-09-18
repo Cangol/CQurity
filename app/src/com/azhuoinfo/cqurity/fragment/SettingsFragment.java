@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.azhuoinfo.cqurity.AccountVerify;
-
 import com.azhuoinfo.cqurity.R;
+
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
-public class MineFragment extends BaseContentFragment {
+public class SettingsFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

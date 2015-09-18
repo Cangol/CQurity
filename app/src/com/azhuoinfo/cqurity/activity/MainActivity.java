@@ -16,8 +16,9 @@ import com.azhuoinfo.cqurity.api.ApiContants;
 import com.azhuoinfo.cqurity.api.task.ApiTask;
 import com.azhuoinfo.cqurity.api.task.OnDataLoader;
 import com.azhuoinfo.cqurity.db.MessageService;
-import com.azhuoinfo.cqurity.fragment.HomeFragment;
+import com.azhuoinfo.cqurity.fragment.ActivityFragment;
 import com.azhuoinfo.cqurity.fragment.MenuFragment;
+import com.azhuoinfo.cqurity.fragment.UserRoleFragment;
 import com.azhuoinfo.cqurity.model.Upgrade;
 import com.azhuoinfo.cqurity.model.User;
 import com.azhuoinfo.cqurity.utils.Constants;
@@ -55,7 +56,7 @@ public class MainActivity extends TabNavigationFragmentActivity implements OnLog
 			// 启用动画
 			this.getCustomFragmentManager().setDefaultAnimation(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
 			this.setMenuFragment(MenuFragment.class, null);
-			this.setContentFragment(HomeFragment.class, "HomeFragment", null, ModuleMenuIDS.MODULE_HOME);
+			this.setContentFragment(ActivityFragment.class, "ActivityFragment", null, ModuleMenuIDS.MODULE_ACTIVITY);
 			if (mGlobalData.get(Constants.KEY_CHECK_UPGRADE) == null || !TimeUtils.getCurrentDate().equals(mGlobalData.get(Constants.KEY_CHECK_UPGRADE))) {
 				// 判断升级提示是否检测过，每天只检测一次
 				checkUpgrade();
@@ -75,7 +76,7 @@ public class MainActivity extends TabNavigationFragmentActivity implements OnLog
 	}
 	@Override
 	public int getContentFrameId() {
-		return R.id.content_frame;
+		return R.id.layout_main;
 	}
 	@Override
 	public void findViews() {

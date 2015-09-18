@@ -17,17 +17,15 @@ import mobi.cangol.mobile.service.AppService;
 import mobi.cangol.mobile.service.global.GlobalData;
 
 public class MenuFragment extends BaseMenuFragment {
-	public TextView mHomeTextView;
-	public TextView mBrandTextView;
+	public TextView mActivityTextView;
+	public TextView mDiscoveryTextView;
 	public TextView mMineTextView;
-	public TextView mCategoryextView;
-	
+
 	private AccountVerify mAccountVerify;
 	private GlobalData mGlobalData;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mAccountVerify = AccountVerify.getInstance(getActivity());
-		mGlobalData=(GlobalData) this.getAppService(AppService.GLOBAL_DATA);
 	}
 
 	@Override
@@ -53,36 +51,27 @@ public class MenuFragment extends BaseMenuFragment {
 	}
 	@Override
 	protected void findViews(View v) {
-		mHomeTextView = (TextView) v.findViewById(R.id.textview_menu_home);
-		mBrandTextView = (TextView) v.findViewById(R.id.textview_menu_brand);
+        mActivityTextView = (TextView) v.findViewById(R.id.textview_menu_activity);
+        mDiscoveryTextView = (TextView) v.findViewById(R.id.textview_menu_discovery);
 		mMineTextView = (TextView) v.findViewById(R.id.textview_menu_mine);
-		mCategoryextView= (TextView) v.findViewById(R.id.textview_menu_category);
-		
+
 	}
 
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
-		mCategoryextView.setOnClickListener(new OnClickListener(){
+        mActivityTextView.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				setContentFragment(MineFragment.class, "MineFragment", null,ModuleMenuIDS.MODULE_CATEGORY);
+				setContentFragment(ActivityFragment.class, "ActivityFragment", null,ModuleMenuIDS.MODULE_ACTIVITY);
 			}
 		
 		});
-		mHomeTextView.setOnClickListener(new OnClickListener(){
+        mDiscoveryTextView.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-				setContentFragment(HomeFragment.class, "HomeFragment", null,ModuleMenuIDS.MODULE_HOME);
-			}
-		
-		});
-		mBrandTextView.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				//setContentFragment(BrandFragment.class, "BrandFragment", null,ModuleMenuIDS.MODULE_BRAND);
+				setContentFragment(DiscoveryFragment.class, "DiscoveryFragment", null,ModuleMenuIDS.MODULE_DISCOVERY);
 			}
 		
 		});
@@ -90,7 +79,7 @@ public class MenuFragment extends BaseMenuFragment {
 
 			@Override
 			public void onClick(View v) {
-				//setContentFragment(MineFragment.class, "MineFragment", null,ModuleMenuIDS.MODULE_MINE);
+				setContentFragment(MineFragment.class, "MineFragment", null, ModuleMenuIDS.MODULE_MINE);
 			}
 		
 		});
@@ -113,28 +102,19 @@ public class MenuFragment extends BaseMenuFragment {
 	
 	protected void updateFocus(int moduleId) {
 		switch (moduleId) {
-		case ModuleMenuIDS.MODULE_CATEGORY:
-			mCategoryextView.setSelected(true);
-			mHomeTextView.setSelected(false);
-			mBrandTextView.setSelected(false);
+		case ModuleMenuIDS.MODULE_ACTIVITY:
+            mActivityTextView.setSelected(true);
+            mDiscoveryTextView.setSelected(false);
 			mMineTextView.setSelected(false);
 			break;
-		case ModuleMenuIDS.MODULE_HOME:
-			mCategoryextView.setSelected(false);
-			mHomeTextView.setSelected(true);
-			mBrandTextView.setSelected(false);
-			mMineTextView.setSelected(false);
-			break;
-		case ModuleMenuIDS.MODULE_BRAND:
-			mCategoryextView.setSelected(false);
-			mHomeTextView.setSelected(false);
-			mBrandTextView.setSelected(true);
+		case ModuleMenuIDS.MODULE_DISCOVERY:
+            mActivityTextView.setSelected(false);
+            mDiscoveryTextView.setSelected(true);
 			mMineTextView.setSelected(false);
 			break;
 		case ModuleMenuIDS.MODULE_MINE:
-			mCategoryextView.setSelected(false);
-			mHomeTextView.setSelected(false);
-			mBrandTextView.setSelected(false);
+            mActivityTextView.setSelected(false);
+            mDiscoveryTextView.setSelected(false);
 			mMineTextView.setSelected(true);
 			break;
 		}

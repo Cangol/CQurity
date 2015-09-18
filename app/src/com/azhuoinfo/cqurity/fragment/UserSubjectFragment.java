@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.azhuoinfo.cqurity.AccountVerify;
-
 import com.azhuoinfo.cqurity.R;
+
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
-public class MineFragment extends BaseContentFragment {
+public class UserSubjectFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class MineFragment extends BaseContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.fragment_mine, container, false);
+		View v = inflater.inflate(R.layout.fragment_user_subjcet, container, false);
 		return v;
 	}
 
@@ -44,7 +44,7 @@ public class MineFragment extends BaseContentFragment {
 	
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
-		this.setTitle(R.string.title_mine);
+		this.setTitle(R.string.title_activity);
 		
 	}
 
@@ -62,10 +62,12 @@ public class MineFragment extends BaseContentFragment {
 	protected FragmentInfo getNavigtionUpToFragment() {
 		return null;
 	}
+	
+
 
 	@Override
 	public boolean isCleanStack() {
-		return true;
+		return false;
 	}
 
 }

@@ -6,12 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.azhuoinfo.cqurity.AccountVerify;
-
 import com.azhuoinfo.cqurity.R;
+
+import mobi.cangol.mobile.actionbar.ActionMenu;
+import mobi.cangol.mobile.actionbar.ActionMenuItem;
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
-public class MineFragment extends BaseContentFragment {
+public class UserJobFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,7 +23,7 @@ public class MineFragment extends BaseContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.fragment_mine, container, false);
+		View v = inflater.inflate(R.layout.fragment_user_job, container, false);
 		return v;
 	}
 
@@ -44,7 +46,7 @@ public class MineFragment extends BaseContentFragment {
 	
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
-		this.setTitle(R.string.title_mine);
+		this.setTitle(R.string.title_activity);
 		
 	}
 
@@ -52,7 +54,21 @@ public class MineFragment extends BaseContentFragment {
 	protected void initData(Bundle savedInstanceState) {
 		
 	}
+    @Override
+    protected boolean onMenuActionCreated(ActionMenu actionMenu) {
+        actionMenu.add(new ActionMenuItem(1, R.string.action_menu_done, -1, 1));
+        return true;
+    }
 
+    @Override
+    protected boolean onMenuActionSelected(ActionMenuItem action) {
+        switch (action.getId()) {
+            case 1:
+                this.replaceFragment(UserSubjectFragment.class,"UserSubjectFragment",null);
+                break;
+        }
+        return super.onMenuActionSelected(action);
+    }
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
@@ -62,10 +78,12 @@ public class MineFragment extends BaseContentFragment {
 	protected FragmentInfo getNavigtionUpToFragment() {
 		return null;
 	}
+	
+
 
 	@Override
 	public boolean isCleanStack() {
-		return true;
+		return false;
 	}
 
 }

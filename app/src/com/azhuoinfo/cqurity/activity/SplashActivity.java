@@ -27,7 +27,7 @@ public class SplashActivity extends BaseActionBarActivity {
         this.setFullScreen(true);
         this.setActionbarShow(false);
         setContentView(R.layout.activity_splashing);
-        initFragmentStack(R.id.guide_frame);
+        initFragmentStack(R.id.layout_splashing);
         mGlobalData=(GlobalData) getAppService(AppService.GLOBAL_DATA);
         checkGuide();
         new Handler().postDelayed(new Runnable() {
@@ -61,7 +61,7 @@ public class SplashActivity extends BaseActionBarActivity {
 		mGlobalData.save(Constants.KEY_USED_VERSION,DeviceInfo.getAppVersion(this));
     }
     public void toMain(){
-    	startActivity(new Intent(SplashActivity.this,MainActivity.class));
+    	startActivity(new Intent(SplashActivity.this,UserInitActivity.class));
     	finish();
     }
 	private void sendLaunch(){

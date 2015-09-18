@@ -12,7 +12,7 @@ public class Constants {
 
 	public static final String TAG = "app_";
 
-	public static final String APP_DIR = "/Cangol/vote";
+	public static final String APP_DIR = "/cqurity";
 
 	public static final String APP_TEMP = APP_DIR + "/temp";
 

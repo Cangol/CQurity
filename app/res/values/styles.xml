@@ -257,9 +257,9 @@
         <item name="android:textSize">14.0sp</item>
         <item name="android:singleLine">true</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/menu_text</item>
-        <item name="android:drawablePadding">8dp</item>
-        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/common_menu_text_selector</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:gravity">center</item>
     </style>
      
 </resources>

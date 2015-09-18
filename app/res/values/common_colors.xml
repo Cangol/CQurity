@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- three color style -->
- 	<color name="common_color_normal">#2196F3</color>
+ 	<color name="common_color_normal">#70CBFB</color>
  	<color name="common_color_disable">#D5D5D5</color>
   	<color name="common_color_dark">#0277BD</color>
    	<color name="common_color_light">#E3F2FD</color>
@@ -10,10 +10,13 @@
     <color name="actionbar_background">@color/common_color_normal</color>
 	<color name="actionbar_search_background">@color/common_color_normal</color>
 	<color name="actionbar_progress_background">@color/common_color_normal</color>
+    <color name="actionbar_tab_text">#8fffffff</color>
+    <color name="actionbar_tab_text_checked">#ffffff</color>
 	
 	<!-- menu color -->
-	<color name="menu_text">#666666</color>
-    <color name="menu_bg">#F2F2F2</color>
+    <color name="menu_text">@color/common_color_disable</color>
+    <color name="menu_text_pressed">@color/common_color_normal</color>
+    <color name="menu_bg">#FFFFFF</color>
     <color name="menu_bg_pressed">@color/common_color_light</color>
     <color name="image_font_pressed">#8f000000</color>
     <!-- common backgroud color -->
