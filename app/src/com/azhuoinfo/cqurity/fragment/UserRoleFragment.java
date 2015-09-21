@@ -121,7 +121,7 @@ public class UserRoleFragment extends BaseContentFragment {
 
     @Override
     public boolean isCleanStack() {
-        return false;
+        return true;
     }
 
 }

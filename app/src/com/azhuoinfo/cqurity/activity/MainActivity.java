@@ -18,7 +18,6 @@ import com.azhuoinfo.cqurity.api.task.OnDataLoader;
 import com.azhuoinfo.cqurity.db.MessageService;
 import com.azhuoinfo.cqurity.fragment.ActivityFragment;
 import com.azhuoinfo.cqurity.fragment.MenuFragment;
-import com.azhuoinfo.cqurity.fragment.UserRoleFragment;
 import com.azhuoinfo.cqurity.model.Upgrade;
 import com.azhuoinfo.cqurity.model.User;
 import com.azhuoinfo.cqurity.utils.Constants;

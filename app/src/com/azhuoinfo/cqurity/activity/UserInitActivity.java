@@ -20,7 +20,7 @@ public class UserInitActivity extends BaseActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userinit);
         this.getCustomActionBar().setTitleGravity(Gravity.CENTER);
-        this.getCustomActionBar().setDisplayHomeAsUpEnabled(false);
+        this.getCustomActionBar().setDisplayShowHomeEnabled(false);
         this.initFragmentStack(R.id.layout_userinit);
         this.getCustomFragmentManager().setDefaultAnimation(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
         findViews();
