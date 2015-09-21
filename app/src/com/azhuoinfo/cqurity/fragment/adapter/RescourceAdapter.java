@@ -13,7 +13,16 @@ import com.azhuoinfo.cqurity.view.listview.BaseAdapter;
 
 public class RescourceAdapter extends BaseAdapter<Rescouce> {
     private Context mContext;
+    private int column=4;
     private ViewGroup.LayoutParams mLayoutParams;
+    private int[] color= {R.drawable.btn_circle_0_selector
+            , R.drawable.btn_circle_1_selector
+            , R.drawable.btn_circle_2_selector
+            , R.drawable.btn_circle_3_selector
+            , R.drawable.btn_circle_4_selector
+            , R.drawable.btn_circle_5_selector
+            , R.drawable.btn_circle_6_selector
+    };
     public RescourceAdapter(Context context) {
         super(context);
         this.mContext = context;
@@ -22,7 +31,7 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
     public ViewGroup.LayoutParams getLayoutParams() {
         DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup. LayoutParams.MATCH_PARENT);
-        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*12*5)/4;
+        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*12*5)/column;
         layoutParams.height = layoutParams.width;
         return layoutParams;
     }
@@ -42,7 +51,7 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
         ViewHolder vh = null;
         if (convertView == null) {
             convertView = View.inflate(parent.getContext(),
-                    R.layout.gridview_item_resource, null);
+                    R.layout.gridview_item_userinit, null);
             vh = new ViewHolder();
             vh.name = (TextView) convertView.findViewById(R.id.gridview_item_resource);
             convertView.setTag(vh);
@@ -52,6 +61,7 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
         }
         Rescouce item =getItem(position);
         vh.name.setText(item.getName());
+        vh.name.setBackgroundResource(color[position%color.length]);
         return convertView;
     }
 

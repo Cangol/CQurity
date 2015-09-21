@@ -14,4 +14,51 @@
 
     <string name="action_menu_done">确定</string>
 
+    <string name="userinit_role_hint">我是</string>
+    <string name="userinit_resource_hint">我能提供的创业资源为</string>
+    <string name="userinit_job_hint">我的职业是</string>
+    <string name="userinit_location_hint">我的地点在</string>
+    <string name="userinit_subject_hint">涵盖的主题包含</string>
+
+    <array name="user_role">
+        <item>个人</item>
+        <item>团队</item>
+    </array>
+
+    <array name="user_rescource">
+        <item>工厂车间</item>
+        <item>天使投资</item>
+        <item>公司注册机构</item>
+        <item>学校教育机构</item>
+    </array>
+
+    <array name="user_job">
+        <item>网络工程师</item>
+        <item>创客手工艺人</item>
+        <item>会计师\税务师</item>
+        <item>创业家</item>
+    </array>
+
+
+    <array name="user_subject">
+        <item>3D打印</item>
+        <item>工艺品</item>
+        <item>汽车智能</item>
+        <item>智能硬件</item>
+    </array>
+
+
+    <array name="user_location">
+        <item>北京</item>
+        <item>上海</item>
+        <item>天津</item>
+        <item>杭州</item>
+        <item>厦门</item>
+        <item>广州</item>
+        <item>成都</item>
+        <item>深圳</item>
+        <item>南京</item>
+        <item>武汉</item>
+    </array>
+
 </resources>

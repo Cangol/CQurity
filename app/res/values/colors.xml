@@ -32,7 +32,14 @@
     <color name="editext_border_focus">#ea4c89</color>
 
 
-    <color name="circle_blue">#4989D2</color>
-    <color name="circle_blue_light">#65b2d8</color>
 
+    <color name="btn_circle_pressed">#8fffffff</color>
+
+    <color name="btn_circle_0">#65B2D8</color>
+    <color name="btn_circle_1">#65C4C0</color>
+    <color name="btn_circle_2">#9CBAC3</color>
+    <color name="btn_circle_3">#478BAC</color>
+    <color name="btn_circle_4">#65B2D8</color>
+    <color name="btn_circle_5">#65B2D8</color>
+    <color name="btn_circle_6">#4989D2</color>
 </resources>

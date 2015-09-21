@@ -76,7 +76,7 @@
 	
 	<!-- button -->
 	<color name="common_btn_normal">@color/common_color_normal</color>
-    <color name="common_btn_pressed">@color/common_color_dark</color>
+    <color name="common_btn_pressed">#4f000000</color>
     <color name="common_btn_enable">#D5D5D5</color>
     
     <color name="common_btn_reverse_normal">@color/common_color_normal</color>

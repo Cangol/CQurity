@@ -9,19 +9,19 @@
         <layer-list>
             <item>
                 <shape android:shape="oval">
-                    <solid android:color="@color/circle_blue_light"/>
+                    <solid android:color="@color/btn_circle_3"/>
                 </shape>
             </item>
             <item>
                 <shape android:shape="oval">
-                    <solid android:color="@color/common_btn_pressed"/>
+                    <solid android:color="@color/btn_circle_pressed"/>
                 </shape>
             </item>
         </layer-list>
     </item>
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/circle_blue_light"/>
+            <solid android:color="@color/btn_circle_3"/>
         </shape>
     </item>
 </selector>

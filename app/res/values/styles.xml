@@ -147,6 +147,14 @@
         <item name="android:progressDrawable">@drawable/common_progress_horizontal_transparent</item>
     </style>
 
+
+    <style name="Common_EditText" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColorHighlight">@color/text_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/common_edittext_bg</item>
+    </style>
+
     <style name="Common_TextView_Title">
         <item name="android:textColor">@color/common_title</item>
         <item name="android:textSize">16sp</item>
@@ -235,11 +243,7 @@
         <item name="android:background">@drawable/common_radio_selector</item>
     </style>
     
-    <style name="Common_TextView_MessageBar">
-        <item name="android:textColor">@color/common_title</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-    
+
 	 <style name="Common_TextView_Update_Nofification_Title">
         <item name="android:textColor">@color/update_notification_title</item>
         <item name="android:textSize">16sp</item>
