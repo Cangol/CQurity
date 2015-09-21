@@ -2,12 +2,16 @@ package com.azhuoinfo.cqurity.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.azhuoinfo.cqurity.AccountVerify;
 import com.azhuoinfo.cqurity.R;
 
+import mobi.cangol.mobile.actionbar.ActionMenu;
+import mobi.cangol.mobile.actionbar.ActionMenuItem;
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
@@ -21,7 +25,7 @@ public class SettingsFragment extends BaseContentFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.fragment_mine, container, false);
+		View v = inflater.inflate(R.layout.fragment_setting, container, false);
 		return v;
 	}
 
@@ -44,7 +48,7 @@ public class SettingsFragment extends BaseContentFragment {
 	
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
-		this.setTitle(R.string.title_mine);
+		this.setTitle("Settings");
 		
 	}
 
@@ -65,7 +69,7 @@ public class SettingsFragment extends BaseContentFragment {
 
 	@Override
 	public boolean isCleanStack() {
-		return true;
+		return false;
 	}
 
 }

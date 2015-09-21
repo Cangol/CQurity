@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.TextView;
 
 import com.azhuoinfo.cqurity.R;
@@ -14,7 +15,7 @@ import com.azhuoinfo.cqurity.view.listview.BaseAdapter;
 public class RescourceAdapter extends BaseAdapter<Rescouce> {
     private Context mContext;
     private int column=4;
-    private ViewGroup.LayoutParams mLayoutParams;
+    private AbsListView.LayoutParams mLayoutParams;
     private int[] color= {R.drawable.btn_circle_0_selector
             , R.drawable.btn_circle_1_selector
             , R.drawable.btn_circle_2_selector
@@ -28,9 +29,9 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
         this.mContext = context;
         mLayoutParams=getLayoutParams();
     }
-    public ViewGroup.LayoutParams getLayoutParams() {
+    public AbsListView.LayoutParams getLayoutParams() {
         DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
-        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup. LayoutParams.MATCH_PARENT);
+        AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, AbsListView. LayoutParams.MATCH_PARENT);
         layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*12*5)/column;
         layoutParams.height = layoutParams.width;
         return layoutParams;

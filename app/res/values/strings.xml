@@ -19,6 +19,11 @@
     <string name="userinit_job_hint">我的职业是</string>
     <string name="userinit_location_hint">我的地点在</string>
     <string name="userinit_subject_hint">涵盖的主题包含</string>
+    <string name="btn_edit_profile">Edit Profile</string>
+    <string name="btn_account_setting">Account Setting</string>
+    <string name="btn_notification">Notification</string>
+    <string name="btn_policy">Terms and Privacy Policy</string>
+    <string name="btn_qa"><![CDATA[Q&A]]></string>
 
     <array name="user_role">
         <item>个人</item>

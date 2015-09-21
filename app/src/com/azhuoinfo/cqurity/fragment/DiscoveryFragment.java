@@ -9,6 +9,8 @@ import com.azhuoinfo.cqurity.AccountVerify;
 import com.azhuoinfo.cqurity.R;
 import com.azhuoinfo.cqurity.view.ActionTabManager;
 
+import mobi.cangol.mobile.actionbar.ActionMenu;
+import mobi.cangol.mobile.actionbar.ActionMenuItem;
 import mobi.cangol.mobile.actionbar.ActionTab;
 import mobi.cangol.mobile.actionbar.ActionTabItem;
 import mobi.cangol.mobile.actionbar.view.ActionTabView;
@@ -85,8 +87,20 @@ public class DiscoveryFragment extends BaseContentFragment {
 	protected FragmentInfo getNavigtionUpToFragment() {
 		return null;
 	}
-	
 
+	@Override
+	protected boolean onMenuActionCreated(ActionMenu actionMenu) {
+		actionMenu.add(new ActionMenuItem(1,null,R.drawable.actionbar_search,1));
+		return super.onMenuActionCreated(actionMenu);
+	}
+
+	@Override
+	protected boolean onMenuActionSelected(ActionMenuItem action) {
+		switch (action.getId()){
+			case 1:
+		}
+		return super.onMenuActionSelected(action);
+	}
 
 	@Override
 	public boolean isCleanStack() {
