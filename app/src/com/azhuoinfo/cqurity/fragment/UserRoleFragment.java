@@ -67,6 +67,8 @@ public class UserRoleFragment extends BaseContentFragment {
         this.setTitle(R.string.title_activity);
         mTitleTextView.setText(R.string.userinit_role_hint);
         mRescourceAdapter=new RescourceAdapter(this.getActivity());
+        mRescourceAdapter.initLayoutParams(2+1);
+        mAllGridView.setNumColumns(2);
         mAllGridView.setAdapter(mRescourceAdapter);
         mAllGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

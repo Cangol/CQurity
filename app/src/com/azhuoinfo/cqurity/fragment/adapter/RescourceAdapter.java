@@ -26,12 +26,21 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
     public RescourceAdapter(Context context) {
         super(context);
         this.mContext = context;
-        mLayoutParams=getLayoutParams();
+        initLayoutParams(column);
     }
+
+    public void initLayoutParams(int column) {
+        this.column = column;
+        DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
+        mLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup. LayoutParams.MATCH_PARENT);
+        mLayoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*8*(2+column-1))/column;
+        mLayoutParams.height = mLayoutParams.width;
+    }
+
     public ViewGroup.LayoutParams getLayoutParams() {
         DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup. LayoutParams.MATCH_PARENT);
-        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*12*5)/column;
+        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*8*(2+column-1))/3;
         layoutParams.height = layoutParams.width;
         return layoutParams;
     }

@@ -45,6 +45,7 @@
         android:id="@+id/edittext_userinit_input"
         style="@style/Common_EditText"
         android:visibility="invisible"
+        android:layout_marginTop="24dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:gravity="left"
