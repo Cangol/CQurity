@@ -27,16 +27,18 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
     public RescourceAdapter(Context context) {
         super(context);
         this.mContext = context;
-        mLayoutParams=getLayoutParams();
+        mLayoutParams= initLayoutParams(column);
     }
-    public AbsListView.LayoutParams getLayoutParams() {
+
+    public AbsListView.LayoutParams initLayoutParams(int size) {
+        this.column=column;
         DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
         AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, AbsListView. LayoutParams.MATCH_PARENT);
-        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*12*5)/column;
+        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*8*(2+column-1))/size;
         layoutParams.height = layoutParams.width;
         return layoutParams;
     }
-    
+
     @Override
     public int getCount() {
         return mItems.size();
@@ -65,6 +67,8 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
         vh.name.setBackgroundResource(color[position%color.length]);
         return convertView;
     }
+
+
 
     class ViewHolder {
         TextView name;
