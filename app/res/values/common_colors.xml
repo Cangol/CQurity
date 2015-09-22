@@ -14,9 +14,9 @@
     <color name="actionbar_tab_text_checked">#ffffff</color>
 	
 	<!-- menu color -->
-    <color name="menu_text">@color/common_color_disable</color>
+    <color name="menu_text">@color/actionbar_tab_text_checked</color>
     <color name="menu_text_pressed">@color/common_color_normal</color>
-    <color name="menu_bg">#FFFFFF</color>
+    <color name="menu_bg">#DAD8D8</color>
     <color name="menu_bg_pressed">@color/common_color_light</color>
     <color name="image_font_pressed">#8f000000</color>
     <!-- common backgroud color -->

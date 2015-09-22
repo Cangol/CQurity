@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/poll_title_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:contentDescription="@string/about_service"
+            android:src="@android:drawable/star_off"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/poll_title_icon"
+            android:layout_toEndOf="@+id/poll_title_icon"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/text_blue"
+            android:textStyle="bold"
+            android:text="@string/test"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="30dp"
+        android:paddingEnd="30dp"
+        android:textSize="18sp"
+        android:text="你的专案CQurity有新成员加入，\n需要你的投票同意"/>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@android:drawable/btn_star"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/about_license"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="@string/test"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btn_circle_0_selector"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="Not Agree"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_circle_1_selector"
+            android:text="Agree"/>
+
+    </LinearLayout>
+
+</LinearLayout>
