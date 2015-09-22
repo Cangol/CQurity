@@ -86,6 +86,7 @@ public class UserLocationFragment extends BaseContentFragment {
         switch (action.getId()) {
             case 1:
                 this.startActivity(new Intent(getActivity(), MainActivity.class));
+                this.getActivity().finish();
                 break;
         }
         return super.onMenuActionSelected(action);
