@@ -59,7 +59,7 @@ public class MineFragment extends BaseContentFragment {
 		mNew.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				replaceFragment(NewProjectFragment.class,"NewProjectFragment",null);
+				replaceFragment(ProjectNewFragment.class,"ProjectNewFragment",null);
 			}
 		});
 	}

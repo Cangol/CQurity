@@ -18,7 +18,7 @@ import mobi.cangol.mobile.base.FragmentInfo;
 /**
  * Created by Administrator on 2015/9/21.
  */
-public class NewProjectFragment extends BaseContentFragment {
+public class ProjectNewFragment extends BaseContentFragment {
     private CheckBox mCheckBox;
     private ToggleButton mToggle;
 
