@@ -67,6 +67,11 @@
             android:name=".activity.UserInitActivity"
             android:configChanges="orientation|keyboardHidden"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/TransparentDialog"/>
         
     </application>
 

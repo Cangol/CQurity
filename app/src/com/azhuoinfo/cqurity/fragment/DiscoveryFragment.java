@@ -56,17 +56,15 @@ public class DiscoveryFragment extends BaseContentFragment {
 	protected void initViews(Bundle savedInstanceState) {
 		this.setTitle(R.string.title_discovery);
         mActionTabManager.addTab(mActionTab.newTab(1, getString(R.string.title_project), 1).getId(), ProjectFragment.class, "ProjectFragment", null);
-        mActionTabManager.addTab(mActionTab.newTab(2, getString(R.string.title_people), 0).getId(), ProjectFragment.class, "ProjectFragment", null);
-
+        mActionTabManager.addTab(mActionTab.newTab(2, getString(R.string.title_people), 0).getId(), PeopleFragment.class, "PeopleFragment", null);
         mActionTab.setOnTabSelectedListener(new ActionTabView.OnTabSelectedListener() {
+			@Override
+			public boolean onTabSelected(ActionTabItem tab) {
+				mActionTabManager.setTabSelected("" + tab.getId());
+				return true;
+			}
+		});
 
-            @Override
-            public boolean onTabSelected(ActionTabItem tab) {
-                mActionTabManager.setTabSelected("" + tab.getId());
-                return true;
-            }
-        });
-		
 	}
 
 	@Override
@@ -90,14 +88,16 @@ public class DiscoveryFragment extends BaseContentFragment {
 
 	@Override
 	protected boolean onMenuActionCreated(ActionMenu actionMenu) {
-		actionMenu.add(new ActionMenuItem(1,null,R.drawable.actionbar_search,1));
+		actionMenu.add(new ActionMenuItem(3,null,R.drawable.actionbar_search,1));
 		return super.onMenuActionCreated(actionMenu);
 	}
 
 	@Override
 	protected boolean onMenuActionSelected(ActionMenuItem action) {
 		switch (action.getId()){
-			case 1:
+			case 3:
+				replaceFragment(SearchFragment.class,"SearchFragment",null);
+				break;
 		}
 		return super.onMenuActionSelected(action);
 	}

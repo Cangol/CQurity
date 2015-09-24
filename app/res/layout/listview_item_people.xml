@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="@android:color/white">
+
+    <com.azhuoinfo.cqurity.view.imageview.round.RoundedImageView
+        android:id="@+id/imageview_list_people_picture"
+        android:layout_marginLeft="25dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user_default"
+        app:border_color="@color/bg_gray"
+        app:border_width="2dp"
+        app:oval="true"/>
+
+    <TextView
+        android:id="@+id/textview_list_peopel_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="Peggy Chi"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textview_list_people_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/bg_gray"
+        android:text="1 project"/>
+</LinearLayout>

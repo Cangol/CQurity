@@ -5,15 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.azhuoinfo.cqurity.AccountVerify;
 import com.azhuoinfo.cqurity.R;
 
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
 
 /**
- * Created by Administrator on 2015/9/21.
+ * Created by Administrator on 2015/9/22.
  */
-public class SearchFragment extends BaseContentFragment {
+public class PollFragment extends BaseContentFragment {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class SearchFragment extends BaseContentFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.fragment_search, container, false);
+        View v = inflater.inflate(R.layout.fragment_poll, container, false);
         return v;
     }
 
@@ -46,6 +47,7 @@ public class SearchFragment extends BaseContentFragment {
 
     @Override
     protected void initViews(Bundle bundle) {
+        this.setTitle("Poll");
 
     }
 
