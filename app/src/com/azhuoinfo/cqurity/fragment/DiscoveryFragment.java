@@ -21,6 +21,7 @@ public class DiscoveryFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
     private ActionTabManager mActionTabManager;
     private ActionTab mActionTab;
+    private int mCurrentId=1;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mAccountVerify = AccountVerify.getInstance(getActivity());
@@ -58,18 +59,21 @@ public class DiscoveryFragment extends BaseContentFragment {
         mActionTabManager.addTab(mActionTab.newTab(1, getString(R.string.title_project), 1).getId(), ProjectFragment.class, "ProjectFragment", null);
         mActionTabManager.addTab(mActionTab.newTab(2, getString(R.string.title_people), 0).getId(), PeopleFragment.class, "PeopleFragment", null);
         mActionTab.setOnTabSelectedListener(new ActionTabView.OnTabSelectedListener() {
-			@Override
-			public boolean onTabSelected(ActionTabItem tab) {
-				mActionTabManager.setTabSelected("" + tab.getId());
-				return true;
-			}
-		});
-
+            @Override
+            public boolean onTabSelected(ActionTabItem tab) {
+                mCurrentId = tab.getId();
+                mActionTabManager.setTabSelected("" + tab.getId());
+                return true;
+            }
+        });
 	}
 
 	@Override
 	protected void initData(Bundle savedInstanceState) {
-		
+        if(savedInstanceState!=null){
+            mCurrentId=savedInstanceState.getInt("currentId");
+        }
+        mActionTabManager.setTabSelected(""+mCurrentId);
 	}
     @Override
     public void onDestroyView() {
@@ -79,6 +83,7 @@ public class DiscoveryFragment extends BaseContentFragment {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
+        outState.putInt("currentId",mCurrentId);
 	}
 
 	@Override
