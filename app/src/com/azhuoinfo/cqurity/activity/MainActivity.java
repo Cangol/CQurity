@@ -49,6 +49,7 @@ public class MainActivity extends TabNavigationFragmentActivity implements OnLog
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        this.setStatusBarTintColor(getResources().getColor(R.color.actionbar_background));
 		this.getCustomActionBar().setTitleGravity(Gravity.CENTER);
 		initStatus();
 		if (savedInstanceState == null) {

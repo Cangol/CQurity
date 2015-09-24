@@ -19,6 +19,7 @@ public class UserInitActivity extends BaseActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userinit);
+        this.setStatusBarTintColor(getResources().getColor(R.color.actionbar_background));
         this.getCustomActionBar().setTitleGravity(Gravity.CENTER);
         this.getCustomActionBar().setDisplayShowHomeEnabled(false);
         this.initFragmentStack(R.id.layout_userinit);

@@ -27,16 +27,15 @@ public class RescourceAdapter extends BaseAdapter<Rescouce> {
     public RescourceAdapter(Context context) {
         super(context);
         this.mContext = context;
-        mLayoutParams= initLayoutParams(column);
+        initLayoutParams(column);
     }
 
-    public AbsListView.LayoutParams initLayoutParams(int size) {
+    public void initLayoutParams(int column) {
         this.column=column;
         DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
-        AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, AbsListView. LayoutParams.MATCH_PARENT);
-        layoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*8*(2+column-1))/size;
-        layoutParams.height = layoutParams.width;
-        return layoutParams;
+        mLayoutParams = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, AbsListView. LayoutParams.MATCH_PARENT);
+        mLayoutParams.width = (int) (displayMetrics.widthPixels-displayMetrics.density*8*(2+column-1))/column;
+        mLayoutParams.height = mLayoutParams.width;
     }
 
     @Override

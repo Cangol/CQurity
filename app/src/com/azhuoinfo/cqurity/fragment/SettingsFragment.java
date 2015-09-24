@@ -49,7 +49,6 @@ public class SettingsFragment extends BaseContentFragment {
 	@Override
 	protected void initViews(Bundle savedInstanceState) {
 		this.setTitle("Settings");
-		
 	}
 
 	@Override
