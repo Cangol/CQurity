@@ -12,9 +12,11 @@
 
     <ListView
         android:id="@+id/listView"
+        android:scrollbars="none"
         style="@style/Common_ListView"
+        android:divider="@color/bg_gray"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </ListView>
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

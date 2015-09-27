@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/about_copyright"
+            android:background="@drawable/ic_user_default"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_gradient"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="CQurity"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Shanghai"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Finance"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/admin_sroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+           
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/white">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/text_blue"
+                android:text="edit"/>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom|left">
+                
+                <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Project Description Project Description\nProject Description,Project Description"/>
+				
+                <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginEnd="60dp"
+                    android:text="Project Hightlight,Project Hightlight"/>
+              <LinearLayout 
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"> 
+                
+                <TextView 
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
+                    android:text="P 2 P"/>
+                
+                <TextView 
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center"                    
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
+                    android:text="Maker"/>
+                
+                </LinearLayout>
+            </LinearLayout>           
+        </RelativeLayout>
+            
+
+
+             
+     <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:text="Team member"/>
+                
+             <TextView
+                 android:id="@+id/textview_team_member_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/text_blue"
+                android:text="edit"/>
+                
+                 <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     android:layout_below="@id/textview_team_member_edit"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                     <com.azhuoinfo.cqurity.view.HorizontalListView
+                         android:id="@+id/listview_team_member"
+                         android:layout_marginTop="20dp"
+                         android:layout_marginLeft="20dp"
+                         android:layout_marginBottom="30dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         />
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:drawablePadding="5dp"
+                         android:layout_marginBottom="30dp"
+                         android:drawableTop="@android:drawable/btn_radio"
+                         android:enabled="true"
+                         android:gravity="center_horizontal"
+                         android:text="Tap to add the first team memebr"
+                         android:textColor="@color/text_blue" />
+                    
+                 </LinearLayout>
+            </RelativeLayout> 
+            
+            
+       <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:text="Project goal"/>
+                
+	             <TextView 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignParentEnd="true"
+	                android:layout_marginTop="10dp"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginLeft="5dp"
+	                android:textColor="@color/text_blue"
+	                android:text="edit"/>
+	             
+	             <TextView 
+	                 android:layout_width="match_parent"
+	                 android:layout_height="wrap_content"
+	                 android:gravity="center_vertical"
+	                 android:layout_marginLeft="20dp"
+	                 android:layout_marginRight="20dp"
+	                 android:layout_marginTop="50dp"
+	                 android:textSize="15sp"
+	                 android:text="2015.6 完成天使融资"/>
+  
+            </RelativeLayout> 
+            
+              <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:text="Post"/>
+
+
+            <TextView
+                android:id="@+id/textview_post_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:enabled="true"
+                android:textColor="@color/text_blue"
+                android:text="edit"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview_post_edit"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/listview_post"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/textview_post_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@android:drawable/btn_radio"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/text_blue"
+                    android:gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:enabled="true"
+                    android:text="Tap to post your recruitment"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:text="History"/>
+
+
+                <TextView
+                    android:id="@+id/textview_history_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:enabled="true"
+                    android:textColor="@color/text_blue"
+                    android:text="edit"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/textview_history_edit"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listview_history"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
