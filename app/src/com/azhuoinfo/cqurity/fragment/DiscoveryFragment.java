@@ -74,6 +74,7 @@ public class DiscoveryFragment extends BaseContentFragment {
             mCurrentId=savedInstanceState.getInt("currentId");
         }
         mActionTabManager.setTabSelected(""+mCurrentId);
+
 	}
     @Override
     public void onDestroyView() {

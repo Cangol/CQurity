@@ -24,7 +24,7 @@ public class PeopleAdminAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return 4;
     }
 
     @Override
@@ -57,7 +57,9 @@ public class PeopleAdminAdapter extends BaseAdapter {
         holder.project.setText("CQurity");
         holder.task.setText("Responsible for IT developing");
         holder.progressBar.setProgress(50);
-        TeamGridAdapter adapter = new TeamGridAdapter(context,4);
+        TeamGridAdapter adapter = new TeamGridAdapter(context,5);
+        holder.num.setVisibility(View.VISIBLE);
+        holder.num.setText("+1");
         holder.grid.setAdapter(adapter);
         return convertView;
     }

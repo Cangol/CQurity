@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,7 +73,8 @@
             android:numColumns="4"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:scrollbars="none"/>
         <TextView
             android:id="@+id/textview_list_people_admin_num"
             android:layout_width="50dp"
@@ -83,6 +83,9 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/ic_team_text"/>
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:background="@drawable/ic_team_text"
+            android:visibility="invisible"/>
     </LinearLayout>
 </LinearLayout>

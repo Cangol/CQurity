@@ -12,6 +12,7 @@ import com.azhuoinfo.cqurity.AccountVerify;
 import com.azhuoinfo.cqurity.R;
 import com.azhuoinfo.cqurity.fragment.adapter.PeopleAdminAdapter;
 import com.azhuoinfo.cqurity.view.RoundProgressBar;
+import com.azhuoinfo.cqurity.view.ScrollListView;
 
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
@@ -21,7 +22,7 @@ import mobi.cangol.mobile.base.FragmentInfo;
  */
 public class PeopleAdminFragment extends BaseContentFragment {
 
-    private ListView mProjects;
+    private ScrollListView mProjects;
 
     private AccountVerify mAccountVerify;
 
@@ -52,7 +53,7 @@ public class PeopleAdminFragment extends BaseContentFragment {
 
     @Override
     protected void findViews(View view) {
-        mProjects = (ListView) view.findViewById(R.id.listview_people_admin_projects);
+        mProjects = (ScrollListView) view.findViewById(R.id.listview_people_admin_projects);
     }
 
     @Override
