@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.azhuoinfo.cqurity.AccountVerify;
 import com.azhuoinfo.cqurity.R;
+import com.azhuoinfo.cqurity.fragment.adapter.PeopleAdminAdapter;
+import com.azhuoinfo.cqurity.view.RoundProgressBar;
 
 import mobi.cangol.mobile.base.BaseContentFragment;
 import mobi.cangol.mobile.base.FragmentInfo;
@@ -18,7 +21,10 @@ import mobi.cangol.mobile.base.FragmentInfo;
  */
 public class PeopleAdminFragment extends BaseContentFragment {
 
+    private ListView mProjects;
+
     private AccountVerify mAccountVerify;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAccountVerify = AccountVerify.getInstance(getActivity());
@@ -27,7 +33,7 @@ public class PeopleAdminFragment extends BaseContentFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.fragment_mine, container, false);
+        View v = inflater.inflate(R.layout.fragment_people_admin, container, false);
         return v;
     }
 
@@ -46,12 +52,14 @@ public class PeopleAdminFragment extends BaseContentFragment {
 
     @Override
     protected void findViews(View view) {
-
+        mProjects = (ListView) view.findViewById(R.id.listview_people_admin_projects);
     }
 
     @Override
     protected void initViews(Bundle bundle) {
 
+        PeopleAdminAdapter adapter = new PeopleAdminAdapter(getActivity().getApplicationContext());
+        mProjects.setAdapter(adapter);
     }
 
     @Override
