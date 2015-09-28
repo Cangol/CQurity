@@ -48,5 +48,10 @@
     <color name="bg_gray">#F0F0F0</color>
     <color name="bg_white">#FFFFFF</color>
 
+    <!-- circle color -->
     <color name="circle_color">#6BCAFC</color>
+
+    <!-- progressbar color -->
+    <color name="progress_color">#f4770f</color>
+    <color name="round_color">#f0f0f0</color>
 </resources>

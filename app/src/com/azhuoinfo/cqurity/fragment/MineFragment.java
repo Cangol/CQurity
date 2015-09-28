@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.azhuoinfo.cqurity.AccountVerify;
 
 import com.azhuoinfo.cqurity.R;
+import com.azhuoinfo.cqurity.fragment.adapter.PeopleAdminAdapter;
 
 import mobi.cangol.mobile.actionbar.ActionMenu;
 import mobi.cangol.mobile.actionbar.ActionMenuItem;
@@ -18,6 +20,7 @@ import mobi.cangol.mobile.base.FragmentInfo;
 public class MineFragment extends BaseContentFragment {
 	private AccountVerify mAccountVerify;
 	private TextView mNew,mExplore;
+	private ImageView mToAdmin;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mAccountVerify = AccountVerify.getInstance(getActivity());
@@ -47,6 +50,7 @@ public class MineFragment extends BaseContentFragment {
 	protected void findViews(View view) {
 		mNew = (TextView) view.findViewById(R.id.textview_mine_new);
 		mExplore = (TextView) view.findViewById(R.id.textview_mine_explore);
+		mToAdmin = (ImageView) view.findViewById(R.id.imageview_mine_arrow);
 	}
 	
 	@Override
@@ -60,6 +64,13 @@ public class MineFragment extends BaseContentFragment {
 			@Override
 			public void onClick(View v) {
 				replaceFragment(ProjectNewFragment.class,"ProjectNewFragment",null);
+			}
+		});
+
+		mToAdmin.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				replaceFragment(PeopleAdminFragment.class,"PeopleAdminFragment",null);
 			}
 		});
 	}

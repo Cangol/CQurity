@@ -6,16 +6,19 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.util.AttributeSet;
 import android.view.View;
 
 import com.azhuoinfo.cqurity.R;
+
+import java.util.jar.Attributes;
 
 public class HistroyView extends View {
 	private Paint cir,rect;
 	private boolean isShowRect = true;
 	
-	public HistroyView(Context context) {
-		super(context);
+	public HistroyView(Context context , AttributeSet attributes) {
+		super(context ,attributes);
 		cir = new Paint();
 		rect = new Paint();
 		cir.setAntiAlias(true);
